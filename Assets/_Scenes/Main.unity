@@ -206,11 +206,9 @@ GameObject:
   - component: {fileID: 34182605}
   - component: {fileID: 34182608}
   - component: {fileID: 34182607}
-  - component: {fileID: 34182606}
-  - component: {fileID: 34182609}
   m_Layer: 0
-  m_Name: Flames (1)
-  m_TagString: Fire
+  m_Name: Fire Pit Flames
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -229,18 +227,6 @@ Transform:
   m_Father: {fileID: 1557111142}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &34182606
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 34182604}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0.028158568, y: 0.00080203975, z: -0.009501015}
 --- !u!199 &34182607
 ParticleSystemRenderer:
   serializedVersion: 4
@@ -306,8 +292,8 @@ ParticleSystem:
   simulationSpeed: 2
   stopAction: 0
   looping: 1
-  prewarm: 1
-  playOnAwake: 1
+  prewarm: 0
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -355,7 +341,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 587799544
+  randomSeed: 526401238
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -2819,11 +2805,11 @@ ParticleSystem:
     collisionShape3: {fileID: 0}
     collisionShape4: {fileID: 0}
     collisionShape5: {fileID: 0}
-    inside: 1
+    inside: 0
     outside: 0
     enter: 0
     exit: 0
-    radiusScale: 1
+    radiusScale: 0.5
   SubModule:
     serializedVersion: 2
     enabled: 0
@@ -3612,17 +3598,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!114 &34182609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 34182604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f437bfbe0929b436a8c4126bd19e673a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &55256212
 GameObject:
   m_ObjectHideFlags: 0
@@ -5068,7 +5043,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1288998981
+  randomSeed: -35280602
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -8666,7 +8641,7 @@ ParticleSystem:
   stopAction: 0
   looping: 1
   prewarm: 1
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -8714,7 +8689,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -52535585
+  randomSeed: -1888615198
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -12186,7 +12161,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 415956092
+  randomSeed: 646731885
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -15464,7 +15439,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1468917732}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 2
@@ -15540,6 +15515,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1557111142}
+  - component: {fileID: 1557111144}
+  - component: {fileID: 1557111143}
   m_Layer: 0
   m_Name: Fire Pit
   m_TagString: Untagged
@@ -15554,7 +15531,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1557111141}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 0.1, z: 5}
+  m_LocalPosition: {x: 5, y: 0.05, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1797449599}
@@ -15564,6 +15541,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1557111143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1557111141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 909ce51f5f8b74307a008c7f6705c3b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flames: {fileID: 34182605}
+--- !u!135 &1557111144
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1557111141}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1569978807
 GameObject:
   m_ObjectHideFlags: 0
