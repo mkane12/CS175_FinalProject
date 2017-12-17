@@ -17,7 +17,6 @@ public class FirePitController : MonoBehaviour {
 	{
 		// check that tag matches Fire tag of torch flames
 		if (other.gameObject.CompareTag ("Fire")) {
-			Debug.Log ("fire");
 			flames.GetComponent<ParticleSystem> ().Play();
 		}
 	}
